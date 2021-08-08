@@ -4,7 +4,7 @@ from .qtvariant import QtCore
 
 
 # Firmware update repository
-UPDATE_REPOSITORY = 'https://fw.air.nettigo.pl/update/data/'
+UPDATE_REPOSITORY = 'https://data.jolly.town/bitcom/'
 # UPDATE_REPOSITORY = 'https://www.madavi.de/sensor/update/data/'
 
 # URI prefixes (protocol parts, essentially) to be downloaded using requests

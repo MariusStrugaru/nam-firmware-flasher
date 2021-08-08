@@ -11,15 +11,15 @@ import logging
 import requests
 from esptool import ESPLoader
 
-import luftdatentool
-from luftdatentool.qtvariant import QtGui, QtCore, QtWidgets
-from luftdatentool.utils import QuickThread
-from luftdatentool.workers import PortDetectThread, FirmwareListThread, \
+import bitcomtool
+from bitcomtool.qtvariant import QtGui, QtCore, QtWidgets
+from bitcomtool.utils import QuickThread
+from bitcomtool.workers import PortDetectThread, FirmwareListThread, \
     ZeroconfDiscoveryThread
 
 from gui import mainwindow
 
-from luftdatentool.consts import UPDATE_REPOSITORY, ALLOWED_PROTO, \
+from bitcomtool.consts import UPDATE_REPOSITORY, ALLOWED_PROTO, \
     PREFERED_PORTS, ROLE_DEVICE, DRIVERS_URL
 
 if getattr(sys, 'frozen', False):
@@ -91,12 +91,12 @@ class MainWindow(QtWidgets.QMainWindow, mainwindow.Ui_MainWindow):
 
     @property
     def version(self):
-        return luftdatentool.__version__
+        return bitcomtool.__version__
 
     @property
     def build_id(self):
         try:
-            from luftdatentool._buildid import commit, builddate
+            from bitcomtool._buildid import commit, builddate
         except ImportError:
             import datetime
             commit = 'devel'

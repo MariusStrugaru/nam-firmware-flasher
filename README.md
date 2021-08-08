@@ -1,7 +1,7 @@
 Nettigo Air Monitor Flashing Tool
 =================================
 
-Based on Luftdaten.info flashing tool (opendata-stuttgart/airrohr-firmware-flasher)
+Based on bitcom.info flashing tool (opendata-stuttgart/airrohr-firmware-flasher)
 
 Binary builds
 -------------
@@ -42,8 +42,8 @@ Then just install dependencies and build everything using:
 ### Binary build debugging
 
 In case an error occurs in early stages of application startup, user will be
-presented with a "Failed to execute script luftdaten-tool.exe" message. In order
-to see actual source of that error, `console` flag in `luftdaten-tool.spec` can
+presented with a "Failed to execute script bitcom-tool.exe" message. In order
+to see actual source of that error, `console` flag in `bitcom-tool.spec` can
 be switched to `True`. In Windows this will make application output a proper
 stack trace to `cmd` popup.
 
@@ -58,7 +58,7 @@ order to install these use the following command:
 To manage dynamic UI and translation binaries generation we use a very simple
 GNU make-based build system.
 
-To simply build everything needed to run `luftdaten-tool.py` run:
+To simply build everything needed to run `bitcom-tool.py` run:
 
     make
 
